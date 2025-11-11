@@ -13,15 +13,12 @@ st.title("🐱🐶 Cat vs Dog Classifier")
 uploaded_file = st.file_uploader("Upload an image of a cat or dog", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
-    # Preprocess image
     # Load original image for display
     original_img = Image.open(uploaded_file)
     st.image(original_img, caption="Uploaded Image", use_column_width=True)
 
-# Resize a copy for prediction
-img = original_img.resize((64, 64)).convert("RGB")
-
-
+    # Resize a copy for prediction
+    img = original_img.resize((64, 64)).convert("RGB")
     img_array = np.array(img) / 255.0
     img_array = img_array.reshape(1, 64, 64, 3)
 
