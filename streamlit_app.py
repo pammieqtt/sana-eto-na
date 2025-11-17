@@ -44,4 +44,3 @@ if uploaded_file is not None:
     st.info(f"Confidence Score: {confidence:.2f}%")
 ```
 
-Let me know if you'd like to add a sample image button or enhance the layout with columns or tabs.
