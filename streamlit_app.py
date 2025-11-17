@@ -3,6 +3,31 @@ from tensorflow.keras.models import load_model
 from PIL import Image
 import numpy as np
 
+# Inject custom CSS for light pink theme
+st.markdown("""
+    <style>
+        .stApp {
+            background-color: #ffe6f0;
+        }
+        .css-1d391kg, .css-1v0mbdj, .css-1dp5vir {  /* Sidebar background */
+            background-color: #ffd6e8 !important;
+        }
+        .stButton>button {
+            background-color: #ffb6c1;
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            border-radius: 8px;
+        }
+        .stButton>button:hover {
+            background-color: #ff99b3;
+        }
+        h1, h2, h3, h4 {
+            color: #cc3366;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 # Load the trained CNN model
 model = load_model("cnn_model.h5")
 
@@ -42,4 +67,3 @@ if uploaded_file is not None:
     # Display results
     st.success(f"Prediction: **{label}**")
     st.info(f"Confidence Score: {confidence:.2f}%")
-
