@@ -42,5 +42,4 @@ if uploaded_file is not None:
     # Display results
     st.success(f"Prediction: **{label}**")
     st.info(f"Confidence Score: {confidence:.2f}%")
-```
 
