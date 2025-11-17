@@ -1,6 +1,3 @@
-Here's a rephrased and enhanced version of your Streamlit app with the project description added as a sidebar. I also polished the comments and structure for clarity and presentation:
-
-```python
 import streamlit as st
 from tensorflow.keras.models import load_model
 from PIL import Image
